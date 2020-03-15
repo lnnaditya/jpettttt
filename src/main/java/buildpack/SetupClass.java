@@ -23,14 +23,14 @@ public class SetupClass {
 		try {
 			//To launch firefox BROWSER
 			if (browser.equalsIgnoreCase("firefox")) {
-				System.setProperty("webdriver.gecko.driver","D:\\seleniumexample\\JPetStoreTest\\src\\test\\resources\\Driver\\geckodriver.exe");
+				System.setProperty("webdriver.gecko.driver",".\\src\\test\\resources\\Driver\\geckodriver.exe");
 				driver = new FirefoxDriver();
 			
 			
 			}
 			// TO launch Chrome Browser
 			else if (browser.equalsIgnoreCase("chrome")) {
-				System.setProperty("webdriver.chrome.driver","D:\\seleniumexample\\JPetStoreTest\\src\\test\\resources\\Driver\\chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver",".\\src\\test\\resources\\Driver\\chromedriver.exe");
 				driver=new ChromeDriver();
 
 			}

@@ -16,7 +16,7 @@ public class SigninPage {
 	WebElement username;
 	@FindBy(name = "password")
 	WebElement password;
-	@FindBy(id = "login")
+	@FindBy(name = "signon")
 	WebElement login;
 	@FindBy(xpath = "//a[@href='/accounts/create?form']")
 	WebElement register;
@@ -28,19 +28,30 @@ public class SigninPage {
 	}
 
 	public void send_User1() throws IOException {
+		username.clear();
+		password.clear();
 
-		 data = new Excel_Class();
+		data = new Excel_Class();
 
 		username.sendKeys(data.excel_username(1));
 		password.sendKeys(data.excel_password(1));
 	}
 
-	public void send_User2() throws IOException
-	{
+	public void send_User2() throws IOException {
+		username.clear();
+		password.clear();
 		username.sendKeys(data.excel_username(2));
 		password.sendKeys(data.excel_password(2));
 	}
-	
+
+	public void send_User3() throws IOException {
+		username.clear();
+		password.clear();
+
+		username.sendKeys(data.excel_username(3));
+		password.sendKeys(data.excel_password(3));
+	}
+
 	public void click_register() {
 		register.click();
 	}
@@ -48,7 +59,7 @@ public class SigninPage {
 	public void click_login() {
 		// TODO Auto-generated method stub
 		login.click();
-		
+
 	}
 
 }
