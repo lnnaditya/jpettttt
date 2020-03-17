@@ -10,64 +10,64 @@ public class RegisterPage {
 	WebDriver driver;
 	
 	
-	@FindBy (id="username")
+	@FindBy (name="username")
 	WebElement userid;
 	
-	@FindBy (id="password")
+	@FindBy (name="password")
 	WebElement newpassword;
 	
-	@FindBy (id="repeatedPassword")
+	@FindBy (name="repeatedPassword")
 	WebElement conformpassword;
 	
-	@FindBy (id="firstName")
+	@FindBy (name="account.firstName")
 	WebElement fristname;
 	
-	@FindBy (id="lastName")
+	@FindBy (name="account.lastName")
 	WebElement lastname;
 	
-	@FindBy (id="email")
+	@FindBy (name="account.email")
 	WebElement email;
 	
-	@FindBy (id="phone")
+	@FindBy (name="account.phone")
 	WebElement phone;
 	
-	@FindBy (id="address1")
+	@FindBy (name="account.address1")
 	WebElement address1;
 	
-	@FindBy (id="address2")
+	@FindBy (name="account.address2")
 	WebElement address2;
 	
-	@FindBy (id="city")
+	@FindBy (name="account.city")
 	WebElement city;
 	
-	@FindBy (id="state")
+	@FindBy (name="account.state")
 	WebElement state;
 	
-	@FindBy (id="zip")
+	@FindBy (name="account.zip")
 	WebElement zip;
 	
-	@FindBy (id="country")
+	@FindBy (name="account.country")
 	WebElement country;
 	
-	@FindBy (id="languagePreference")
+	@FindBy (name="account.languagePreference")
 	WebElement languagePreference;
 	
-	@FindBy (xpath="//option[@value='English']")
+	@FindBy (xpath="//option[@value='english']")
 	WebElement english;
 	
-	@FindBy (id="favouriteCategoryId")
+	@FindBy (name="account.favouriteCategoryId")
 	WebElement favouriteCategoryId;
 	
 	@FindBy (xpath="//option[@value='DOGS']")
 	WebElement selectCategory;
 	
-	@FindBy (id="listOption1")
+	@FindBy (name="account.listOption")
 	WebElement enableMyList;
 	
-	@FindBy (id="bannerOption1")
+	@FindBy (name="account.bannerOption")
 	WebElement enableMybanner;
 	
-	@FindBy (id="save")
+	@FindBy (name="newAccount")
 	WebElement Save_Account_Information;
 	
 	public RegisterPage(WebDriver driver) {
@@ -76,89 +76,39 @@ public class RegisterPage {
 	}
 	
 	
-	public void send_Userid() {
+	public void registration_Data() throws InterruptedException {
+		Thread.sleep(4000);
 		userid.sendKeys("adityaadii");
-	}
-	
-	
-	public void send_Newpassword() {
 		newpassword.sendKeys("adityajithuu");
-	}
-	
-	public void send_Conformpassword() {
 		conformpassword.sendKeys("adityajithu");
-	}
-	
-	public void send_Fristname() {
 		fristname.sendKeys("Aditya");
-	}
-	
-	public void send_Lastname() {
 		lastname.sendKeys("Kalapatapu");
-	}
-	
-	public void send_Email() {
 		email.sendKeys("lnnaditya@gmail.com");
-	}
-	
-	public void send_Phone() {
 		phone.sendKeys("07416801468");
-	}
-	
-	public void send_Address1() {
 		address1.sendKeys("16/21-2,S.N.Puram.");
-	}
-	
-	public void send_Address2() {
 		address2.sendKeys("Gudivada1");
-	}
-	
-	public void send_City() {
 		city.sendKeys("Gudivada");
-	}
-	
-	public void send_State() {
 		state.sendKeys("AndhraPradesh");
-	}
-	
-	public void send_Zip() {
 		zip.sendKeys("521301");
-	}
-	
-	public void send_country() {
 		country.sendKeys("India");
-	}
-	
-	public void Click_LanguagePreference() {
 		languagePreference.click();
-	}
-	
-	public void Click_English() {
+		Thread.sleep(4000);
 		english.click();
-	}
-	
-	public void Click_FavouriteCategoryId() {
+		Thread.sleep(4000);
 		favouriteCategoryId.click();
-	}
-	
-	public void Click_SelectCategory() {
+		Thread.sleep(4000);
 		selectCategory.click();
-	}
-	
-	public void Click_EnableMyList() {
 		enableMyList.click();
-	}
-	
-	public void Click_EnableMybanner() {
 		enableMybanner.click();
+		
+		
 	}
-	
-	public void Click_Save_Account_Information() {
+	public void submitInfo() {
+		
 		Save_Account_Information.click();
+		
 	}
-	
-	
-	
+
 
 	
 	

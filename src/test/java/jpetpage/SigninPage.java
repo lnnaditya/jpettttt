@@ -18,7 +18,7 @@ public class SigninPage {
 	WebElement password;
 	@FindBy(name = "signon")
 	WebElement login;
-	@FindBy(xpath = "//a[@href='/accounts/create?form']")
+	@FindBy(linkText ="Register Now!")
 	WebElement register;
 
 	public SigninPage(WebDriver driver) {
@@ -40,6 +40,7 @@ public class SigninPage {
 	public void send_User2() throws IOException {
 		username.clear();
 		password.clear();
+		data = new Excel_Class();
 		username.sendKeys(data.excel_username(2));
 		password.sendKeys(data.excel_password(2));
 	}
@@ -47,7 +48,7 @@ public class SigninPage {
 	public void send_User3() throws IOException {
 		username.clear();
 		password.clear();
-
+		data = new Excel_Class();
 		username.sendKeys(data.excel_username(3));
 		password.sendKeys(data.excel_password(3));
 	}

@@ -25,7 +25,8 @@ public class Search_Test extends SetupClass {
 	    // Write code here that turns the phrase above into concrete actions
 		launchApplication("chrome", "https://petstore.octoperf.com/actions/Catalog.action");
 	}
-	@When("^the user Search for the \"([^\"]*)\"$")
+	
+	@When("^the user Search for the (.+)$")
 	public void the_user_Search_for_the(String arg1)  {
 	    // Write code here that turns the phrase above into concrete actions
 	 homepage=new HomePage(driver);

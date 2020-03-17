@@ -9,7 +9,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features="src/test/resources/functionalTests/JpetTest1.feature",
 		plugin = {"pretty", "html:reports/cucumber-html-report"},
-		tags = {"@TS_02"},
+		tags = {"@TS_01,@TS_02,@TS_03,@TS_04,@TS_05,@TS_06,@TS_07,@TS_08,@TS_09"},
 		glue = {"com.JpetStepDefinition"},
 		monochrome = true
 		)

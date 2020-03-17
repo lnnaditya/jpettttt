@@ -8,13 +8,10 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features="src/test/resources/functionalTests/JpetTest1.feature",
 		plugin = {"pretty", "html:reports/cucumber-html-report"},
-		tags = {"@TS_02"},
+	tags = {"@TS_19"},
 		glue = {"com.JpetStepDefinition"},
 		monochrome = true
 		)
 public class Search_TestRunner {
 	
-
-
-
 }
