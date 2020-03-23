@@ -22,26 +22,26 @@ public class Search_Test extends SetupClass {
 	String argument;
 	@Given("^the user should launch browser$")
 	public void the_user_should_launch_browser()  {
-	    // Write code here that turns the phrase above into concrete actions
+	    // launch the browser 
 		launchApplication("chrome", "https://petstore.octoperf.com/actions/Catalog.action");
 	}
 	
 	@When("^the user Search for the (.+)$")
 	public void the_user_Search_for_the(String arg1)  {
-	    // Write code here that turns the phrase above into concrete actions
-	 homepage=new HomePage(driver);
+	 homepage=new HomePage(driver);//home page object
 		argument=arg1;
-	  homepage.send_Search_Keys(argument);
-	  homepage.search_button();
+	  homepage.send_Search_Keys(argument);//sending valid search key
+	  homepage.search_button();//click on search button
 		
 	}
 
 	@Then("^check if the golden retriever is displayed$")
 	public void check_if_the_golden_retriever_is_displayed()  {
-	    // Write code here that turns the phrase above into concrete actions
+	    // Asserting the valid search 
 	  String argument_match=driver.findElement(By.xpath("//*[@id='Catalog']/table/tbody/tr[2]/td[3]")).getText();
 	
 	Assert.assertTrue(argument_match.contains(argument), "No such item");
+	quit();
 	}
 	
 	

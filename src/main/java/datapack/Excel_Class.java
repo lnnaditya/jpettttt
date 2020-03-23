@@ -11,7 +11,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class Excel_Class {
 	public String excel_username(int i) throws IOException {
 		// TODO Auto-generated method stub
-		FileInputStream fil = new FileInputStream(new File("D:\\seleniumexample\\JPetStoreTest\\src\\test\\resources\\data\\data1.xlsx"));
+		FileInputStream fil = new FileInputStream(new File("C:\\Users\\Sree\\git\\jpettttt\\src\\test\\resources\\data\\data1.xlsx"));
 		XSSFWorkbook workbook = new XSSFWorkbook(fil);
 		XSSFSheet sheet = workbook.getSheet("Sheet1");
 		int count = sheet.getLastRowNum();
@@ -27,7 +27,7 @@ public class Excel_Class {
 
 	public String excel_password(int i) throws IOException {
 		// TODO Auto-generated method stub
-		FileInputStream fil = new FileInputStream(new File("D:\\seleniumexample\\JPetStoreTest\\src\\test\\resources\\data\\data1.xlsx"));
+		FileInputStream fil = new FileInputStream(new File("C:\\Users\\Sree\\git\\jpettttt\\src\\test\\resources\\data\\data1.xlsx"));
 		XSSFWorkbook workbook = new XSSFWorkbook(fil);
 		XSSFSheet sheet = workbook.getSheet("Sheet1");
 		int count = sheet.getLastRowNum();

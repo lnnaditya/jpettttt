@@ -39,7 +39,7 @@ Then the user should click addtocart
 
 @TS_06
 Scenario: Registration
-Given the user1 launch the application
+Given the user one launch the application
 When the user click login icon
 And the user should click registernow
 And fill the details

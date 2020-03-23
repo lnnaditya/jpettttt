@@ -16,25 +16,23 @@ public class No_Of_Cats extends SetupClass {
 	HomePage homepage;
 	@Given("^the userr launch the appliationn$")
 	public void the_userr_launch_the_appliation() {
-	    // Write code here that turns the phrase above into concrete actions
+	    // To lunch the browser
 		launchApplication("chrome", "https://petstore.octoperf.com/actions/Catalog.action");
 	}
 
 	@When("^the userr click on cats$")
 	public void the_userr_click_cats()  {
-	    // Write code here that turns the phrase above into concrete actions
-	    homepage=new HomePage(driver);
-	    homepage.click_Cats();
+	    homepage=new HomePage(driver);//home page object
+	    homepage.click_Cats();//to click on cats in home page 
 	}
 
 	@Then("^the userr should get no of  types of cats$")
 	public void the_userr_should_get_no_of_types_of_cats()  {
-	    // Write code here that turns the phrase above into concrete actions
 	    
 		List<WebElement> links=driver.findElements(By.xpath("//a"));
 		int number=links.size();
-		System.out.println((number-11)+":no of cats");
-		
+		System.out.println((number-11)+":no of cats");//print no of cats available 
+		quit();//close the driver
 		
 	}
 	

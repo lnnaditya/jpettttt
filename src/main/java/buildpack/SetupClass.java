@@ -15,7 +15,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class SetupClass {
 	
-	
 	protected WebDriver driver;
 	
 	public void launchApplication(String browser, String url) {
@@ -43,13 +42,6 @@ public class SetupClass {
 			System.out.println(" browser could not be launched");
 		}
 	
-	}
-	// To Take Screenshot
-	public void screenshot(String path) throws IOException
-	{
-		TakesScreenshot ts=((TakesScreenshot)driver);
-		File Source=ts.getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(Source,new File(path));
 	}
 	//To close the browser
    public void quit(){

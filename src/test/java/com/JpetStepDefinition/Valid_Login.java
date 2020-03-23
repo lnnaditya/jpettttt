@@ -29,23 +29,24 @@ public void the_user_lauch_application_3nd_time() {
 	
 	
 	@When("^the user enter valid username and password$")
-	public void the_user_enter_valid_details() throws IOException {
-signinpage=new SigninPage(driver);
-homepage=new HomePage(driver);
-homepage.click_Signin();
+	public void the_user_enter_valid_details() throws IOException, InterruptedException {
+signinpage=new SigninPage(driver);//signin page object 
+homepage=new HomePage(driver);//homepage object
+homepage.click_Signin();//click signin 
 
 		signinpage.send_User2();
+		Thread.sleep(3000);
 		signinpage.click_login();
+		Thread.sleep(3000);
 	}
 
 	@Then("^check the first name$")
 	public void check_the_first_name() {
-
+		//Assert first name 
 		String firstname = driver.findElement(By.id("WelcomeContent")).getText();
 		Assert.assertTrue(firstname.equalsIgnoreCase("Welcome Kalapatapu Lakshmi Narasimha!"), "Invalid login");
-		homepage.click_logout();
-		driver.close();
+		homepage.click_logout();//click logout
+		quit();//close the driver
 	}
-	
 	
 }

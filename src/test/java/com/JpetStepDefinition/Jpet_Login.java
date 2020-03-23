@@ -23,36 +23,33 @@ public class Jpet_Login extends SetupClass {
 
 	@Given("^the user should launch the application$")
 	public void the_User_Launch_Browser() {
-
+		//to launch the application
 		launchApplication("chrome", "https://petstore.octoperf.com/actions/Catalog.action");
 
 	}
 
 	@When("^the user open the 	Home Page$")
 	public void the_User_click_signin() {
-		homepage = new HomePage(driver);
-		homepage.click_Signin();
+		homepage = new HomePage(driver);// homepage object
+		homepage.click_Signin();// click signin button
 
 	}
 
 	@Then("^enter username and password$")
-	public void the_User_enter_login_dtails() throws IOException {
-		signinpage = new SigninPage(driver);
-		signinpage.send_User1();
-		signinpage.click_login();
-
-		// homepage.click_logout();
-
+	public void the_User_enter_login_dtails() throws IOException, InterruptedException {
+		signinpage = new SigninPage(driver);//siginpage driver
+		signinpage.send_User1();//valid user details
+		Thread.sleep(3000);
+		signinpage.click_login();//click on login 
+		Thread.sleep(3000);
 	}
 
 	@Then("^click signout$")
 	public void click_signout() {
 
-		homepage.click_logout();
+		homepage.click_logout();//to click logout
 
+		quit();//to close the driver
 	}
-
-	
-	
 
 }

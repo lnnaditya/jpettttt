@@ -11,16 +11,19 @@ public class CheckTheBirds extends SetupClass {
 
 	@Given("^the user have to launch browser$")
 	public void the_user_have_to_launch_browser() {
-		homepage=new HomePage(driver);
+		// to launch application
+		homepage = new HomePage(driver);
 		launchApplication("chrome", "https://petstore.octoperf.com/actions/Catalog.action");
-		
+
 	}
 
 	@Then("^the user should click the birdspic$")
+	// to click bird pic
 	public void the_user_should_click_the_birdspic() {
+		homepage = new HomePage(driver);
+		homepage.click_bird_pic();// to click on birds pic on home page
 
-		homepage.click_bird_pic();
-		
+		quit();// to close the driver
 	}
 
 }

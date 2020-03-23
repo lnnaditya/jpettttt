@@ -18,14 +18,14 @@ public class No_Of_Fishs extends SetupClass {
 	
 	@Given("^the userrr launch the appliationn$")
 	public void the_userrr_launch_the_appliationn() {
-	   
+	   //launch the browser
 		launchApplication("chrome", "https://petstore.octoperf.com/actions/Catalog.action");
 	}
 
 	@When("^the userrr click on Fish$")
 	public void the_userrr_click_on_Fish()  {	
-		homepage=new HomePage(driver);
-		homepage.click_fish_link();
+		homepage=new HomePage(driver);//home page object 
+		homepage.click_fish_link();//click on fish link in home page
 	}
 
 	@Then("^the userrr should get no of  types of Fish$")
@@ -33,7 +33,8 @@ public class No_Of_Fishs extends SetupClass {
 		
 		List<WebElement> links=driver.findElements(By.xpath("//a"));
 		int number=links.size();
-		System.out.println((number-11)+":no of fishs");
+		System.out.println((number-11)+":no of fishs");//print no of fish available
+	quit();//close the browser
 	}
 
 

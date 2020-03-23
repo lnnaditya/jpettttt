@@ -18,14 +18,14 @@ public class No_Of_Reptils extends SetupClass {
 	
 	@Given("^the userrr should launch the appliationn$")
 	public void the_userrr_launch_the_appliationn() {
-	   
+	   //To launch browser
 		launchApplication("chrome", "https://petstore.octoperf.com/actions/Catalog.action");
 	}
 
 	@When("^the userrr click on Reptails$")
 	public void the_userrr_click_on_Repatails()  {	
-		homepage=new HomePage(driver);
-		homepage.click_reptiles();
+		homepage=new HomePage(driver);//homepage object
+		homepage.click_reptiles();//To click reptails in home page
 	}
 
 	@Then("^the userrr should get no of  types of Reptails$")
@@ -33,7 +33,8 @@ public class No_Of_Reptils extends SetupClass {
 		
 		List<WebElement> links=driver.findElements(By.xpath("//a"));
 		int number=links.size();
-		System.out.println((number-11)+":no of Reptails");
+		System.out.println((number-11)+":no of Reptails");//print no of reptails available
+		quit();//close the driver
 	}
 
 

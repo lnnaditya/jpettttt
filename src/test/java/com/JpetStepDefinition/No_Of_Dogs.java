@@ -15,15 +15,14 @@ public class No_Of_Dogs extends SetupClass {
 	HomePage homepage;
 	@Given("^the userr launch the appliation$")
 	public void the_userr_launch_the_appliation() {
-	    // Write code here that turns the phrase above into concrete actions
+	    // lauch the application
 		launchApplication("chrome", "https://petstore.octoperf.com/actions/Catalog.action");
 	}
 
 	@When("^the userr click Dogs$")
 	public void the_userr_click_Dogs()  {
-	    // Write code here that turns the phrase above into concrete actions
-	    homepage=new HomePage(driver);
-	    homepage.click_Dogs();
+	    homepage=new HomePage(driver);//homepage object
+	    homepage.click_Dogs();//cick dogs
 	}
 
 	@Then("^the userr should get no of  types of dogs$")
@@ -32,9 +31,9 @@ public class No_Of_Dogs extends SetupClass {
 	    
 		List<WebElement> links=driver.findElements(By.xpath("//a"));
 		int number=links.size();
-		System.out.println((number-11)+":no of dogs");
+		System.out.println((number-11)+":no of dogs");//print no of dogs available
 		
-		
+		quit();
 	}
 	
 }

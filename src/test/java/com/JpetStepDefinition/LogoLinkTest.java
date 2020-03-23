@@ -10,23 +10,24 @@ public class LogoLinkTest extends SetupClass {
 	HomePage homepage;
 	@Given("^the user(\\d+) launch the application$")
 	public void the_user_launch_the_application(int arg1)  {
-	    // Write code here that turns the phrase above into concrete actions
+	    //to launch the driver 
 		launchApplication("chrome", "https://petstore.octoperf.com/actions/Catalog.action");
 		
 	}
 
 	@When("^the user(\\d+) click login icon$")
 	public void the_user_click_login_icon(int arg1)  {
-	    // Write code here that turns the phrase above into concrete actions
-		homepage=new HomePage(driver);
-		homepage.click_Signin();
+		homepage=new HomePage(driver);//homepage object
+		homepage.click_Signin();//to click signin
 		
 	}
 
 	@Then("^the user(\\d+) should click logo$")
 	public void the_user_should_click_logo(int arg1)  {
 	    // Write code here that turns the phrase above into concrete actions
-	 homepage.click_Logo();
+	 homepage.click_Logo();//to click on logo
+	 quit();//To close the driver
+	 
 	}
 
 }
