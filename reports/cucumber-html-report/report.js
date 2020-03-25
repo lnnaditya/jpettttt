@@ -14,9 +14,9 @@ formatter.feature({
 });
 formatter.scenario({
   "line": 4,
-  "name": "Login in the JpetStore",
+  "name": "Valid Login",
   "description": "",
-  "id": "jpetstore;login-in-the-jpetstore",
+  "id": "jpetstore;valid-login",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
@@ -28,142 +28,340 @@ formatter.scenario({
 });
 formatter.step({
   "line": 5,
-  "name": "the user should launch the application",
+  "name": "the user should launch the application as first task",
   "keyword": "Given "
 });
 formatter.step({
   "line": 6,
-  "name": "the user open the \tHome Page",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 7,
-  "name": "enter username and password",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 8,
-  "name": "click signout",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Jpet_Login.the_User_Launch_Browser()"
-});
-formatter.result({
-  "duration": 12211093800,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Jpet_Login.the_User_click_signin()"
-});
-formatter.result({
-  "duration": 466305500,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Jpet_Login.the_User_enter_login_dtails()"
-});
-formatter.result({
-  "duration": 391674100,
-  "error_message": "java.lang.IncompatibleClassChangeError: Found interface org.apache.poi.util.POILogger, but class was expected\r\n\tat org.apache.poi.openxml4j.opc.PackageRelationshipCollection.parseRelationshipsPart(PackageRelationshipCollection.java:304)\r\n\tat org.apache.poi.openxml4j.opc.PackageRelationshipCollection.\u003cinit\u003e(PackageRelationshipCollection.java:156)\r\n\tat org.apache.poi.openxml4j.opc.PackageRelationshipCollection.\u003cinit\u003e(PackageRelationshipCollection.java:124)\r\n\tat org.apache.poi.openxml4j.opc.PackagePart.loadRelationships(PackagePart.java:559)\r\n\tat org.apache.poi.openxml4j.opc.PackagePart.\u003cinit\u003e(PackagePart.java:112)\r\n\tat org.apache.poi.openxml4j.opc.PackagePart.\u003cinit\u003e(PackagePart.java:83)\r\n\tat org.apache.poi.openxml4j.opc.PackagePart.\u003cinit\u003e(PackagePart.java:128)\r\n\tat org.apache.poi.openxml4j.opc.ZipPackagePart.\u003cinit\u003e(ZipPackagePart.java:78)\r\n\tat org.apache.poi.openxml4j.opc.ZipPackage.getPartsImpl(ZipPackage.java:218)\r\n\tat org.apache.poi.openxml4j.opc.OPCPackage.getParts(OPCPackage.java:662)\r\n\tat org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:269)\r\n\tat org.apache.poi.util.PackageHelper.open(PackageHelper.java:39)\r\n\tat org.apache.poi.xssf.usermodel.XSSFWorkbook.\u003cinit\u003e(XSSFWorkbook.java:204)\r\n\tat datapack.Excel_Class.excel_username(Excel_Class.java:15)\r\n\tat jpetpage.SigninPage.send_User1(SigninPage.java:36)\r\n\tat com.JpetStepDefinition.Jpet_Login.the_User_enter_login_dtails(Jpet_Login.java:41)\r\n\tat ✽.Then enter username and password(src/test/resources/functionalTests/JpetTest1.feature:7)\r\n",
-  "status": "failed"
-});
-formatter.match({
-  "location": "Jpet_Login.click_signout()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.scenario({
-  "line": 10,
-  "name": "Invalid Login",
-  "description": "",
-  "id": "jpetstore;invalid-login",
-  "type": "scenario",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "line": 9,
-      "name": "@TS_02"
-    }
-  ]
-});
-formatter.step({
-  "line": 11,
-  "name": "the user sholud launch the application 2nd time",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 12,
-  "name": "the user gets Home Page",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 13,
-  "name": "user enter invalid username and password",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 14,
-  "name": "check if the error messge is displayed",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Invalid_Login.the_user_lauch_application_2nd_time()"
-});
-formatter.result({
-  "duration": 15925931800,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Invalid_Login.the_user_gets_Home_Page()"
-});
-formatter.result({
-  "duration": 1117300,
-  "error_message": "java.lang.NullPointerException\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\r\n\tat com.sun.proxy.$Proxy19.click(Unknown Source)\r\n\tat jpetpage.HomePage.click_Signin(HomePage.java:49)\r\n\tat com.JpetStepDefinition.Invalid_Login.the_user_gets_Home_Page(Invalid_Login.java:33)\r\n\tat ✽.When the user gets Home Page(src/test/resources/functionalTests/JpetTest1.feature:12)\r\n",
-  "status": "failed"
-});
-formatter.match({
-  "location": "Invalid_Login.user_enter_invalid_username_and_password()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Invalid_Login.check_if_the_error_messge_is_displayed()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.scenario({
-  "line": 16,
-  "name": "Valid Login",
-  "description": "",
-  "id": "jpetstore;valid-login",
-  "type": "scenario",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "line": 15,
-      "name": "@TS_03"
-    }
-  ]
-});
-formatter.step({
-  "line": 17,
-  "name": "the user should launch the applicatiob 3rd time",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 18,
   "name": "the user enter valid username and password",
   "keyword": "When "
 });
 formatter.step({
-  "line": 19,
+  "line": 7,
   "name": "check the first name",
   "keyword": "Then "
 });
 formatter.match({
   "location": "Valid_Login.the_user_lauch_application_3nd_time()"
+});
+formatter.result({
+  "duration": 13311892500,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Valid_Login.the_user_enter_valid_details()"
+});
+formatter.result({
+  "duration": 8762714300,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Valid_Login.check_the_first_name()"
+});
+formatter.result({
+  "duration": 731135400,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 9,
+  "name": "logo link check",
+  "description": "",
+  "id": "jpetstore;logo-link-check",
+  "type": "scenario",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 8,
+      "name": "@TS_02"
+    }
+  ]
+});
+formatter.step({
+  "line": 10,
+  "name": "the user2 launch the application",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 11,
+  "name": "the user2 click login icon",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 12,
+  "name": "the user2 should click logo",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 8
+    }
+  ],
+  "location": "LogoLinkTest.the_user_launch_the_application(int)"
+});
+formatter.result({
+  "duration": 10613091200,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 8
+    }
+  ],
+  "location": "LogoLinkTest.the_user_click_login_icon(int)"
+});
+formatter.result({
+  "duration": 437653000,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 8
+    }
+  ],
+  "location": "LogoLinkTest.the_user_should_click_logo(int)"
+});
+formatter.result({
+  "duration": 470267300,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 14,
+  "name": "No of types in Fish link",
+  "description": "",
+  "id": "jpetstore;no-of-types-in-fish-link",
+  "type": "scenario",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 13,
+      "name": "@TS_03"
+    }
+  ]
+});
+formatter.step({
+  "line": 15,
+  "name": "the userrr launch the appliationn",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 16,
+  "name": "the userrr click on Fish",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 17,
+  "name": "the userrr should get no of  types of Fish",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "No_Of_Fishs.the_userrr_launch_the_appliationn()"
+});
+formatter.result({
+  "duration": 10412881000,
+  "status": "passed"
+});
+formatter.match({
+  "location": "No_Of_Fishs.the_userrr_click_on_Fish()"
+});
+formatter.result({
+  "duration": 368833100,
+  "status": "passed"
+});
+formatter.match({
+  "location": "No_Of_Fishs.the_userrr_should_get_no_of_types_of_Fish()"
+});
+formatter.result({
+  "duration": 166124600,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 19,
+  "name": "Add to cart fish",
+  "description": "",
+  "id": "jpetstore;add-to-cart-fish",
+  "type": "scenario",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 18,
+      "name": "@TS_04"
+    }
+  ]
+});
+formatter.step({
+  "line": 20,
+  "name": "the user llaunch the application",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 21,
+  "name": "the user llogin with valid details",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 22,
+  "name": "the user should click Fish",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 23,
+  "name": "the user should click angelfish",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 24,
+  "name": "the user should click adddtocart",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Add_To_Cart_Fish.the_user_lauch_application()"
+});
+formatter.result({
+  "duration": 10588787000,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Add_To_Cart_Fish.the_user_enter_valid_details()"
+});
+formatter.result({
+  "duration": 7692044100,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Add_To_Cart_Fish.the_user_click_Fish()"
+});
+formatter.result({
+  "duration": 363352100,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Add_To_Cart_Fish.the_user_click_AngelFish()"
+});
+formatter.result({
+  "duration": 283839500,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Add_To_Cart_Fish.the_user_click_agaddtocart()"
+});
+formatter.result({
+  "duration": 957150000,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 26,
+  "name": "checkout",
+  "description": "",
+  "id": "jpetstore;checkout",
+  "type": "scenario",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 25,
+      "name": "@TS_05"
+    }
+  ]
+});
+formatter.step({
+  "line": 27,
+  "name": "the user launch the application jpet",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 28,
+  "name": "the user login with valid details in jpet",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 29,
+  "name": "the user should click dogs in jpet homepage",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 30,
+  "name": "the user should click Golden Retriever in dogs page",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 31,
+  "name": "the user should click addtocart to check out",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 32,
+  "name": "the user should click proceed to checkout",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 33,
+  "name": "the user should click continue",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 34,
+  "name": "the user should click confirm",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Check_Out_Test.the_user_launch_the_application_jpet()"
+});
+formatter.result({
+  "duration": 11367842700,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Check_Out_Test.the_user_login_with_valid_details_in_jpet()"
+});
+formatter.result({
+  "duration": 7734486300,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Check_Out_Test.the_user_should_click_dogs_in_jpet_homepage()"
+});
+formatter.result({
+  "duration": 348225000,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Check_Out_Test.the_user_should_click_Golden_Retriever_in_dogs_page()"
+});
+formatter.result({
+  "duration": 395955500,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Check_Out_Test.the_user_should_click_addtocart_to_check_out()"
+});
+formatter.result({
+  "duration": 4436941300,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Check_Out_Test.the_user_should_click_proceed_to_checkout()"
+});
+formatter.result({
+  "duration": 318773300,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Check_Out_Test.the_user_should_click_continue()"
+});
+formatter.result({
+  "duration": 354603500,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Check_Out_Test.the_user_should_click_confirm()"
+});
+formatter.result({
+  "duration": 515828200,
+  "status": "passed"
+});
 });

@@ -12,27 +12,23 @@ import cucumber.api.java.en.When;
 import jpetpage.HomePage;
 import jpetpage.SigninPage;
 
-public class Valid_Login extends SetupClass  {
+public class Valid_Login extends SetupClass {
 
-	
-	
 	HomePage homepage;
 	SigninPage signinpage;
 
-	
-	@Given("^the user should launch the applicatiob 3rd time$")
-public void the_user_lauch_application_3nd_time() {
-		
+	@Given("^the user should launch the application as first task$")
+	public void the_user_lauch_application_3nd_time() {
+
 		launchApplication("chrome", "https://petstore.octoperf.com/actions/Catalog.action");
-		
+
 	}
-	
-	
+
 	@When("^the user enter valid username and password$")
 	public void the_user_enter_valid_details() throws IOException, InterruptedException {
-signinpage=new SigninPage(driver);//signin page object 
-homepage=new HomePage(driver);//homepage object
-homepage.click_Signin();//click signin 
+		signinpage = new SigninPage(driver);// signin page object
+		homepage = new HomePage(driver);// homepage object
+		homepage.click_Signin();// click signin
 
 		signinpage.send_User2();
 		Thread.sleep(3000);
@@ -42,11 +38,11 @@ homepage.click_Signin();//click signin
 
 	@Then("^check the first name$")
 	public void check_the_first_name() {
-		//Assert first name 
+		// Assert first name
 		String firstname = driver.findElement(By.id("WelcomeContent")).getText();
 		Assert.assertTrue(firstname.equalsIgnoreCase("Welcome Kalapatapu Lakshmi Narasimha!"), "Invalid login");
-		homepage.click_logout();//click logout
-		quit();//close the driver
+		homepage.click_logout();// click logout
+		quit();// close the driver
 	}
-	
+
 }

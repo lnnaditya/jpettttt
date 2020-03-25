@@ -17,8 +17,8 @@ public class Excel_Class {
 		int count = sheet.getLastRowNum();
 		System.out.println(count);
 
-		XSSFRow row = sheet.getRow(i);
-		XSSFCell cell = row.getCell(0);
+		XSSFRow row = sheet.getRow(i); // to get username in i_th row from the excel sheet  
+		XSSFCell cell = row.getCell(0);// to get cell(0) username from the excel sheet
 		String un = cell.getStringCellValue();
 
 		return un;
@@ -34,8 +34,8 @@ public class Excel_Class {
 		System.out.println(count);
 
 
-		XSSFRow row = sheet.getRow(i);
-		XSSFCell cell = row.getCell(1);
+		XSSFRow row = sheet.getRow(i);// to get password in i_th row from the excel sheet 
+		XSSFCell cell = row.getCell(1);// to get cell(1) password from the excel sheet
 		String un = cell.getStringCellValue();
 		return un;
 	}
