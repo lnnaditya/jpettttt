@@ -29,7 +29,7 @@ public class AddToCartDog extends SetupClass {
 		homepage = new HomePage(driver);
 		homepage.click_Signin();
 
-		signinpage.send_User2();
+		signinpage.send_User2();//sending valid user details from excel
 		signinpage.click_login();
 		Thread.sleep(3000);
 	}

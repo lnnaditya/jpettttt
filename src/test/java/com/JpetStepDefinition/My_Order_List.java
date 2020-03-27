@@ -30,7 +30,7 @@ public class My_Order_List extends SetupClass{
 		homepage = new HomePage(driver);//homepage object
 		homepage.click_Signin();//click sigin
 
-		signinpage.send_User2();//send valid user details
+		signinpage.send_User2();//to send valid user details from excel sheet
 		Thread.sleep(3000);
 		signinpage.click_login();//click on login
 		Thread.sleep(3000);

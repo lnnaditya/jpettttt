@@ -30,7 +30,7 @@ public class Valid_Login extends SetupClass {
 		homepage = new HomePage(driver);// homepage object
 		homepage.click_Signin();// click signin
 
-		signinpage.send_User2();
+		signinpage.send_User2();//to send valid user details from excel sheet
 		Thread.sleep(3000);
 		signinpage.click_login();
 		Thread.sleep(3000);

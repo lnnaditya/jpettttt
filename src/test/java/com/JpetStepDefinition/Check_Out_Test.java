@@ -33,7 +33,7 @@ public class Check_Out_Test extends SetupClass {
 		homepage = new HomePage(driver);
 		homepage.click_Signin();
 
-		signinpage.send_User2();// to send valid user details
+		signinpage.send_User2();// to send valid user details from excel sheet
 		Thread.sleep(3000); // to sleep after filling login details
 		signinpage.click_login();
 		Thread.sleep(3000);// to sleep after clicking login button

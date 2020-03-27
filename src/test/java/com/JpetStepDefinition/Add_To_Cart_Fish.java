@@ -1,6 +1,7 @@
 package com.JpetStepDefinition;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import buildpack.SetupClass;
 import cucumber.api.java.en.Given;
@@ -32,7 +33,7 @@ public class Add_To_Cart_Fish extends SetupClass {
 		homepage = new HomePage(driver);// object for homepage
 		homepage.click_Signin();
 
-		signinpage.send_User2();// sending valid user details
+		signinpage.send_User2();// sending valid user details from excel
 		Thread.sleep(3000);
 		signinpage.click_login();
 		Thread.sleep(3000);
@@ -42,6 +43,7 @@ public class Add_To_Cart_Fish extends SetupClass {
 	// to click on fish
 	public void the_user_click_Fish() throws IOException {
 		homepage = new HomePage(driver);
+		
 		homepage.click_fish_link();
 	}
 

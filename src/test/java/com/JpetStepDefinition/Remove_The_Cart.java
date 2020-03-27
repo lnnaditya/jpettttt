@@ -31,7 +31,7 @@ public class Remove_The_Cart extends SetupClass {
 		homepage = new HomePage(driver);//homepage object
 		homepage.click_Signin();//to click sign in home page 
 
-		signinpage.send_User2();//to fill valid user details
+		signinpage.send_User2();//to send valid user details from excel sheet
 		Thread.sleep(3000);
 		signinpage.click_login();//toclick on login 
 		Thread.sleep(3000);
